@@ -1,0 +1,24 @@
+import { getRockets } from "./api.js";
+
+export async function loadRockets(app) {
+  app.innerHTML = `<div class="grid" id="grid"></div>`;
+  const grid = document.getElementById("grid");
+
+  const data = await getRockets();
+
+  data.results.forEach(r => {
+    const el = document.createElement("div");
+    el.className = "card";
+
+    el.innerHTML = `
+      <img src="${r.image || 'assets/placeholder.jpg'}" />
+      <div class="card-content">
+        <div class="title">${r.name}</div>
+        <div class="meta">🏢 ${r.manufacturer?.name || "Unknown"}</div>
+        <div class="meta">⚡ Reusable: ${r.reusable ? "Yes" : "No"}</div>
+      </div>
+    `;
+
+    grid.appendChild(el);
+  });
+}
