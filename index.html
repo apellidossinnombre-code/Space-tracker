@@ -2,23 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Space Tracker PRO</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Launch Tracker</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
-<header>
-  <h1>🚀 Space Tracker PRO</h1>
+<header class="topbar">
+  <div class="logo">🚀 Launch Tracker</div>
 
-  <input id="search" placeholder="Buscar misión..." />
+  <input id="search" placeholder="Search launches, rockets, agencies..." />
 </header>
-
-<nav>
-  <button onclick="location.hash='#/'">Todos</button>
-  <button onclick="setFilter('live')">Activos</button>
-  <button onclick="setFilter('success')">Exitosos</button>
-  <button onclick="setFilter('failed')">Fallidos</button>
-</nav>
 
 <main id="app"></main>
 
