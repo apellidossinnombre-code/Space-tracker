@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #070b14;
+  color: white;
+}
+
+header {
+  padding: 16px;
+  background: #0d1425;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.card {
+  background: #111a2e;
+  margin: 10px;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #2b6fff;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
