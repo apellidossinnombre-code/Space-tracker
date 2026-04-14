@@ -9,11 +9,10 @@ header {
   position: sticky;
   top: 0;
   background: #0f172a;
-  padding: 10px 15px;
+  padding: 12px;
   display: flex;
-  gap: 15px;
+  gap: 12px;
   align-items: center;
-  z-index: 1000;
   border-bottom: 1px solid #1f2937;
 }
 
@@ -27,14 +26,12 @@ nav a:hover {
   color: white;
 }
 
-/* GRID PRINCIPAL */
 .grid {
   display: grid;
   gap: 12px;
   padding: 12px;
 }
 
-/* CARD TIPO NEXT SPACEFLIGHT */
 .card {
   display: flex;
   gap: 12px;
@@ -52,33 +49,29 @@ nav a:hover {
 
 .card-content {
   padding: 10px;
-  flex: 1;
 }
 
 .title {
-  font-size: 15px;
   font-weight: 600;
 }
 
 .meta {
   font-size: 12px;
   color: #9ca3af;
-  margin-top: 4px;
 }
 
 .badge {
   display: inline-block;
-  font-size: 11px;
   padding: 3px 7px;
   border-radius: 6px;
-  margin-top: 6px;
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 .go { background: #16a34a; }
 .fail { background: #dc2626; }
 .tbd { background: #6b7280; }
 
-/* MAP */
 #map {
   height: 80vh;
 }
