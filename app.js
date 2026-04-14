@@ -16,7 +16,24 @@ function router() {
 
 window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
+window.addEventListener("search", async (e) => {
+  const q = e.detail;
 
+  if (!q) return router();
+
+  const { searchLaunches } = await import("./services/api.js");
+  const data = await searchLaunches(q);
+
+  const app = document.getElementById("app");
+  app.innerHTML = "<h2>Resultados</h2>";
+
+  data.results.forEach(l => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<h3>${l.name}</h3>`;
+    app.appendChild(div);
+  });
+});
 // search global
 document.getElementById("search").addEventListener("input", (e) => {
   window.dispatchEvent(new CustomEvent("search", {
